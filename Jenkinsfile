@@ -29,13 +29,7 @@ pipeline {
             }
             steps{
                 sh '''
-                    echo "Test stage"
-                    if [ -f src/App.js ]; then
-                        echo "✅ index.html exists inside build directory"
-                        else
-                        echo "❌ index.html is missing"
-                        exit 1
-                    fi
+                    test -f build/index.html
                     npm test
                 '''
             }

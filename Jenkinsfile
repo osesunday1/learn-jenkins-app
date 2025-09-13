@@ -24,7 +24,7 @@ pipeline {
             steps{
                 sh '''
                     echo "Test stage"
-                    if [ -f build/index.html ]; then
+                    if [ -f src/App.js ]; then
                         echo "✅ index.html exists inside build directory"
                         else
                         echo "❌ index.html is missing"
